@@ -18,14 +18,14 @@ class VagasController {
     create(req, res) {
         let pb = req.body;
         VagasService_1.default.create(pb)
-            .then(vagas => helper_1.default.sendRes(res, HttpStatus.OK, "Vaga registrada"))
+            .then(vagas => helper_1.default.sendRes(res, HttpStatus.OK, `${vagas} teste registrada`))
             .catch(err => console.error.bind(console, `Error ${err}`));
     }
     update(req, res) {
         const _id = req.params.id;
         let vaga = req.body;
         VagasService_1.default.update(_id, vaga)
-            .then(vagas => helper_1.default.sendRes(res, HttpStatus.OK, `${vaga.Cargu} foi atualizada`))
+            .then(vagas => helper_1.default.sendRes(res, HttpStatus.OK, `${vagas} foi atualizada`))
             .catch(err => console.error.bind(console, `Error ${err}`));
     }
     delete(req, res) {

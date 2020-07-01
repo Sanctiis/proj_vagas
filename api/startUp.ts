@@ -1,6 +1,6 @@
 import * as express from 'express'
 import Db from './infra/db'
-import * as bodeParser from 'body-parser'
+import * as bodyParser from 'body-parser'
 import VagasController from './controllers/VagasController'
 
 class StartUp {
@@ -17,8 +17,8 @@ class StartUp {
   }
 
   middleware() {
-    this.app.use(bodeParser.json())
-    this.app.use(bodeParser.urlencoded({ extended: false }))
+    this.app.use(bodyParser.json())
+    this.app.use(bodyParser.urlencoded({ extended: false }))
   }
 
   routes() {
@@ -31,13 +31,7 @@ class StartUp {
     this.app.route('/api/v1/vagas').post(VagasController.create)
     this.app.route('/api/v1/vagas').put(VagasController.update)
     this.app.route('/api/v1/vagas').delete(VagasController.delete)
-
   }
-
-  
-
-
-
 }
 
 export default new StartUp();

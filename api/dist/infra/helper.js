@@ -2,8 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 class Helper {
     constructor() {
-        this.sendRes = function (res, statusCode, date) {
-            res.status(statusCode).json({ result: date });
+        this.sendRes = function (res, statusCode, data) {
+            res.status(statusCode).json({ result: data });
         };
     }
 }
