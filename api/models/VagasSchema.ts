@@ -4,8 +4,8 @@ const VagasSchema = new mongoose.Schema({
   cargo: {type:String},
   cidade: {type:String},
   escolaridade: {type:String},
-  createdAt: {type:Date},
-  isActive: {type:Boolean}
+  isActive: {type:Boolean},
+  timestamps: {type:Boolean}
 });
 
 export default VagasSchema;

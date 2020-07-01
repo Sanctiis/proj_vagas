@@ -31,7 +31,7 @@ class VagasController {
     delete(req, res) {
         const _id = req.params.id;
         VagasService_1.default.delete(_id)
-            .then(() => helper_1.default.sendRes(res, HttpStatus.OK, `Vaga removida`))
+            .then(() => helper_1.default.sendRes(res, HttpStatus.OK, "Vaga removida"))
             .catch(err => console.error.bind(console, `Error ${err}`));
     }
 }
